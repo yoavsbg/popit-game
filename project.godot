@@ -1,0 +1,48 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="Pop It"
+run/main_scene="res://scenes/splash.tscn"
+config/quit_on_go_back=false
+config/features=PackedStringArray("4.7", "Mobile")
+boot_splash/bg_color=Color(0.105882, 0.0745098, 0.25098, 1)
+boot_splash/show_image=false
+config/icon="res://icon.svg"
+
+[autoload]
+
+SaveData="*res://autoload/save_data.gd"
+Settings="*res://autoload/settings.gd"
+Audio="*res://autoload/audio.gd"
+Haptics="*res://autoload/haptics.gd"
+Game="*res://autoload/game.gd"
+Router="*res://autoload/router.gd"
+Dev="*res://autoload/dev.gd"
+
+[display]
+
+window/size/viewport_width=390
+window/size/viewport_height=844
+window/handheld/orientation=1
+window/stretch/mode="canvas_items"
+window/stretch/aspect="keep_width"
+
+[physics]
+
+3d/physics_engine="Jolt Physics"
+
+[rendering]
+
+rendering_device/driver.windows="d3d12"
+renderer/rendering_method="mobile"
+environment/defaults/default_clear_color=Color(0.105882, 0.0745098, 0.25098, 1)
+textures/vram_compression/import_etc2_astc=true

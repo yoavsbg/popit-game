@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Pop It Level 1</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+body{margin:0;font-family:'Fredoka',system-ui,sans-serif}
+a{color:inherit;text-decoration:none}
+.pulse{animation:ring-pulse 0.8s ease-in-out infinite alternate}
+@keyframes ring-pulse{from{outline-offset:2px}to{outline-offset:5px}}
+</style>
+</helmet>
+<div style="width:390px;height:844px;box-sizing:border-box;background:#1B1340;color:#FFFFFF;font-family:'Fredoka',system-ui,sans-serif;display:flex;flex-direction:column;gap:16px;padding:56px 24px 32px;overflow:hidden">
+  <div style="display:flex;align-items:center;justify-content:space-between">
+    <a href="Levels.dc.html" aria-label="Back to levels" style="width:48px;height:48px;border-radius:16px;background:#2A1F5E;color:#FFFFFF;display:flex;align-items:center;justify-content:center">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg>
+    </a>
+    <div style="text-align:center">
+      <h1 style="margin:0;font-size:24px;line-height:1.1;font-weight:600">Level 1</h1>
+      <div style="font-size:14px;color:#B9B1E6">Pop the ringed bubbles</div>
+    </div>
+    <button aria-label="Mute sound" style="width:48px;height:48px;border-radius:16px;border:0;background:#2A1F5E;color:#FFFFFF;display:flex;align-items:center;justify-content:center;padding:0">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 5 6 9H3v6h3l5 4V5z"/><path d="M15.5 8.5a5 5 0 0 1 0 7"/><path d="M18.5 5.5a9 9 0 0 1 0 13"/></svg>
+    </button>
+  </div>
+  <div style="display:flex;flex-direction:column;align-items:center;gap:10px">
+    <div style="display:flex;align-items:baseline;justify-content:center;gap:10px">
+      <span style="font-size:68px;font-weight:600;line-height:1;font-variant-numeric:tabular-nums">1.874</span>
+      <span style="font-size:20px;color:#B9B1E6">sec</span>
+    </div>
+    <div style="display:flex;align-items:center;gap:8px">
+      <span style="width:12px;height:12px;border-radius:50%;background:#FFD23F"></span>
+      <span style="width:12px;height:12px;border-radius:50%;background:#FFD23F"></span>
+      <span style="width:12px;height:12px;border-radius:50%;background:#3A2E7A"></span>
+      <span style="width:12px;height:12px;border-radius:50%;background:#3A2E7A"></span>
+      <span style="width:12px;height:12px;border-radius:50%;background:#3A2E7A"></span>
+      <span style="margin-left:6px;font-size:16px;color:#B9B1E6">2 / 5</span>
+    </div>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(5, minmax(0, 1fr));gap:12px;padding:4px">
+    <sc-for list="{{cells}}" as="b" hint-placeholder-count="35">
+      <div class="{{b.cls}}" style="aspect-ratio:1;border-radius:50%;background:{{b.bg}};box-shadow:{{b.shadow}};transform:scale({{b.scale}});outline:{{b.ring}};outline-offset:3px"></div>
+    </sc-for>
+  </div>
+  <p style="margin:auto 0 0;text-align:center;font-size:15px;color:#B9B1E6">Wrong bubble adds 1.000s</p>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":390,"height":844}}'>
+class Component extends DCLogic {
+  renderVals() {
+    const n = 35;
+    const popped = [13, 27];
+    const targets = [6, 20, 33];
+    const cells = [];
+    for (let i = 0; i < n; i++) {
+      const isPopped = popped.indexOf(i) >= 0;
+      const isTarget = targets.indexOf(i) >= 0;
+      cells.push({
+        bg: isPopped ? '#2A1F5E' : 'radial-gradient(circle at 34% 28%, rgba(255,255,255,0.65), rgba(255,255,255,0) 52%), hsl(' + Math.round(i * 360 / n) + ' 82% 62%)',
+        shadow: isPopped ? 'inset 0 4px 8px rgba(0,0,0,0.45)' : 'inset 0 -4px 6px rgba(0,0,0,0.2)',
+        scale: isPopped ? '0.78' : '1',
+        ring: isTarget ? '3px solid #FFFFFF' : 'none',
+        cls: isTarget ? 'pulse' : 'still'
+      });
+    }
+    return { cells: cells };
+  }
+}
+</script>
+</body>
+</html>

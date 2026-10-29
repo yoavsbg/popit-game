@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Pop It Level Clear</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+body{margin:0;font-family:'Fredoka',system-ui,sans-serif}
+a{color:inherit;text-decoration:none}
+</style>
+</helmet>
+<div style="position:relative;width:390px;height:844px;box-sizing:border-box;background:#1B1340;color:#FFFFFF;font-family:'Fredoka',system-ui,sans-serif;display:flex;flex-direction:column;padding:56px 24px 40px;overflow:hidden">
+  <sc-for list="{{confetti}}" as="c" hint-placeholder-count="14">
+    <div aria-hidden="true" style="position:absolute;left:{{c.x}}px;top:{{c.y}}px;width:{{c.s}}px;height:{{c.s}}px;border-radius:50%;background:{{c.bg}}"></div>
+  </sc-for>
+  <div style="position:relative;display:flex;justify-content:flex-end">
+    <button aria-label="Mute sound" style="width:48px;height:48px;border-radius:16px;border:0;background:#2A1F5E;color:#FFFFFF;display:flex;align-items:center;justify-content:center;padding:0">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 5 6 9H3v6h3l5 4V5z"/><path d="M15.5 8.5a5 5 0 0 1 0 7"/><path d="M18.5 5.5a9 9 0 0 1 0 13"/></svg>
+    </button>
+  </div>
+  <div style="position:relative;flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;text-align:center">
+    <h1 style="margin:0;font-size:28px;font-weight:600;color:#B9B1E6">Level 1 clear</h1>
+    <div style="display:flex;align-items:baseline;justify-content:center;gap:10px">
+      <span style="font-size:96px;font-weight:700;line-height:1;font-variant-numeric:tabular-nums">3.871</span>
+      <span style="font-size:24px;color:#B9B1E6">sec</span>
+    </div>
+    <div style="display:flex;align-items:center;gap:10px">
+      <span style="display:flex;align-items:center;gap:6px;padding:6px 14px;border-radius:20px;background:#FFD23F;color:#1B1340;font-size:18px;font-weight:600">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="#1B1340" aria-hidden="true"><path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9L12 3z"/></svg>
+        New best
+      </span>
+      <span style="font-size:16px;color:#B9B1E6">Previous 4.215s</span>
+    </div>
+    <div style="display:flex;gap:12px;width:100%;margin-top:18px">
+      <div style="flex:1;box-sizing:border-box;padding:14px 16px;border-radius:18px;background:#2A1F5E;text-align:left">
+        <div style="font-size:14px;color:#B9B1E6">Targets</div>
+        <div style="font-size:26px;font-weight:600">5 / 5</div>
+      </div>
+      <div style="flex:1;box-sizing:border-box;padding:14px 16px;border-radius:18px;background:#2A1F5E;text-align:left">
+        <div style="font-size:14px;color:#B9B1E6">Wrong taps</div>
+        <div style="font-size:26px;font-weight:600">0</div>
+      </div>
+    </div>
+  </div>
+  <div style="position:relative;display:flex;flex-direction:column;gap:14px">
+    <a href="Level2.dc.html" style="display:flex;align-items:center;justify-content:center;height:60px;border-radius:30px;background:#FFD23F;color:#1B1340;font-size:22px;font-weight:600">Next level</a>
+    <div style="display:flex;gap:14px">
+      <a href="Level1.dc.html" style="flex:1;display:flex;align-items:center;justify-content:center;height:56px;box-sizing:border-box;border-radius:28px;border:2px solid #8B7FD8;color:#FFFFFF;font-size:20px;font-weight:600">Retry</a>
+      <a href="Levels.dc.html" style="flex:1;display:flex;align-items:center;justify-content:center;height:56px;box-sizing:border-box;border-radius:28px;border:2px solid #8B7FD8;color:#FFFFFF;font-size:20px;font-weight:600">Levels</a>
+    </div>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":390,"height":844}}'>
+class Component extends DCLogic {
+  renderVals() {
+    const spots = [
+      [28, 120, 14], [96, 168, 10], [330, 132, 16], [286, 196, 10], [352, 250, 12],
+      [40, 300, 12], [150, 112, 8], [236, 128, 12], [18, 214, 8], [372, 352, 8],
+      [64, 408, 10], [322, 420, 14], [200, 92, 10], [120, 244, 8]
+    ];
+    const confetti = spots.map(function (s, i) {
+      return { x: s[0], y: s[1], s: s[2], bg: 'hsl(' + Math.round(i * 360 / spots.length) + ' 82% 62%)' };
+    });
+    return { confetti: confetti };
+  }
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,10 @@
+[
+  { "id": "rainbow", "name": "Rainbow", "type": "hue", "saturation": 0.82, "lightness": 0.62,
+    "dot": ["#FF6B6B", "#FFD23F", "#5BE3A0", "#5BB8FF", "#B58CFF"] },
+  { "id": "candy", "name": "Candy", "type": "palette",
+    "colors": ["#FF6FB5", "#FF9FCF", "#C68BFF", "#FF85B8", "#FF7E96", "#B48CFF"],
+    "dot": ["#FF8FC8", "#FFC2E2", "#D9A3FF", "#FFB3D1"] },
+  { "id": "ocean", "name": "Ocean", "type": "palette",
+    "colors": ["#3DB8E8", "#5BE3D8", "#2E7FD9", "#7FD3F0", "#4FA3F7", "#63E0B8"],
+    "dot": ["#3DB8E8", "#5BE3D8", "#2E7FD9", "#7FD3F0"] }
+]

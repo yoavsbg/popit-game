@@ -1,0 +1,31 @@
+{
+  "v": 3,
+  "createdOnFiles": { "v": 1, "at": "2026-10-29T07:40:00Z" },
+  "title": "Pop It Game Screens",
+  "launch": { "view": "canvas" },
+  "pages": [],
+  "boards": {
+    "Main.dc.html": { "x": 0, "y": 0, "w": 390, "h": 844, "title": "1 Home", "is_interactive": true },
+    "Levels.dc.html": { "x": 470, "y": 0, "w": 390, "h": 844, "title": "2 Level select", "is_interactive": true },
+    "Level1.dc.html": { "x": 940, "y": 0, "w": 390, "h": 844, "title": "3 Level 1 playing", "is_interactive": true },
+    "Level2.dc.html": { "x": 1410, "y": 0, "w": 390, "h": 844, "title": "4 Level 2 two boards", "is_interactive": true },
+    "Result.dc.html": { "x": 1880, "y": 0, "w": 390, "h": 844, "title": "5 Level clear", "is_interactive": true },
+    "FreePop.dc.html": { "x": 2350, "y": 0, "w": 390, "h": 844, "title": "6 Free pop", "is_interactive": true }
+  },
+  "order": [
+    "Main.dc.html",
+    "Levels.dc.html",
+    "Level1.dc.html",
+    "Level2.dc.html",
+    "Result.dc.html",
+    "FreePop.dc.html"
+  ],
+  "notes": {
+    "title": { "x": 0, "y": -260, "text": "Pop It: game screens (working title)", "kind": "title1", "maxW": 2740 },
+    "n-sound": { "x": 0, "y": 910, "w": 330, "size": "s", "fill": "orange", "text": "Sound on every pop. The mute button sits top right on every screen." },
+    "n-rule": { "x": 940, "y": 910, "w": 330, "size": "s", "fill": "teal", "text": "Only ringed bubbles count. A wrong tap adds +1.000s. Targets pulse with a white ring, so they never rely on color alone." },
+    "n-levels": { "x": 1410, "y": 910, "w": 330, "size": "s", "fill": "blue", "text": "Level 2: two boards back to back on one timer. Levels 3 and up (flashing, moving targets) come later." },
+    "n-free": { "x": 2350, "y": 910, "w": 330, "size": "s", "fill": "purple", "text": "Free pop is the searchable core: no timer, no targets, a different picture revealed under every pop." }
+  },
+  "designSystems": []
+}

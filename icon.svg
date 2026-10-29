@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024">
+  <defs>
+    <radialGradient id="gloss" cx="0.34" cy="0.28" r="0.52">
+      <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.68"/>
+      <stop offset="1" stop-color="#FFFFFF" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="shade" cx="0.5" cy="0.35" r="0.62">
+      <stop offset="0.7" stop-color="#000000" stop-opacity="0"/>
+      <stop offset="1" stop-color="#000000" stop-opacity="0.22"/>
+    </radialGradient>
+    <radialGradient id="bg" cx="0.5" cy="0.3" r="0.85">
+      <stop offset="0" stop-color="#2E2270"/>
+      <stop offset="1" stop-color="#1B1340"/>
+    </radialGradient>
+    <radialGradient id="pit" cx="0.5" cy="0.62" r="0.6">
+      <stop offset="0.6" stop-color="#000000" stop-opacity="0"/>
+      <stop offset="1" stop-color="#000000" stop-opacity="0.45"/>
+    </radialGradient>
+  </defs>
+  <rect width="1024" height="1024" fill="url(#bg)"/>
+  <g>
+    <circle cx="262" cy="262" r="102" fill="#F2545B"/>
+    <circle cx="512" cy="262" r="102" fill="#FFB43A"/>
+    <circle cx="762" cy="262" r="102" fill="#F5E04A"/>
+    <circle cx="262" cy="512" r="102" fill="#4FDB7A"/>
+    <circle cx="512" cy="512" r="102" fill="#3FD6E0"/>
+    <circle cx="762" cy="512" r="102" fill="#4C8DF6"/>
+    <circle cx="262" cy="762" r="102" fill="#8A5CF6"/>
+    <circle cx="512" cy="762" r="102" fill="#D45CF0"/>
+    <circle cx="762" cy="762" r="102" fill="#F25CA8"/>
+  </g>
+  <g fill="url(#shade)">
+    <circle cx="262" cy="262" r="102"/><circle cx="512" cy="262" r="102"/><circle cx="762" cy="262" r="102"/>
+    <circle cx="262" cy="512" r="102"/><circle cx="512" cy="512" r="102"/><circle cx="762" cy="512" r="102"/>
+    <circle cx="262" cy="762" r="102"/><circle cx="512" cy="762" r="102"/><circle cx="762" cy="762" r="102"/>
+  </g>
+  <g fill="url(#gloss)">
+    <circle cx="262" cy="262" r="102"/><circle cx="512" cy="262" r="102"/><circle cx="762" cy="262" r="102"/>
+    <circle cx="262" cy="512" r="102"/><circle cx="512" cy="512" r="102"/><circle cx="762" cy="512" r="102"/>
+    <circle cx="262" cy="762" r="102"/><circle cx="512" cy="762" r="102"/><circle cx="762" cy="762" r="102"/>
+  </g>
+  <circle cx="512" cy="512" r="124" fill="none" stroke="#FFFFFF" stroke-width="14"/>
+  <g>
+    <circle cx="762" cy="762" r="103" fill="url(#bg)"/>
+    <circle cx="762" cy="762" r="80" fill="#2A1F5E"/>
+    <circle cx="762" cy="762" r="80" fill="url(#pit)"/>
+  </g>
+</svg>
