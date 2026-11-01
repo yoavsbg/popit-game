@@ -1,0 +1,25 @@
+# Pop It
+
+> Pop It is a bubble-popping speed game for iPhone. Only the ringed bubbles count: pop them as fast as you can, avoid the wrong ones, and beat your best time across 200 levels. Free, no ads, no account, works offline.
+
+Pop It is a casual mobile game made by Yoav Sabag. Each level highlights a few bubbles with a ring. The player taps only those, and every tap on a plain bubble adds 1.000 seconds to their time. Clearing a level always unlocks the next one; the time only decides whether it is a new personal best.
+
+## Key features
+
+- 200 levels that get trickier: static targets at first, then targets that flash and targets that slide to a neighbouring bubble.
+- Best times: the best time is saved for every level.
+- Free pop: a relaxing mode with no timer and a choice of bubble themes.
+- Sound, haptics and a looping music track, with a mute switch.
+- Private: no ads, no in-app purchases, no analytics, no account and no network use. Progress is stored only on the device.
+
+## Links
+
+- [App Store listing](https://apps.apple.com/app/id6828549272): download Pop It for iOS.
+- Privacy Policy: /privacy/ on this site
+- Terms of Use: /terms/ on this site
+
+## Notes
+
+- Platform: iPhone. An Android version is planned.
+- Pricing: free, with no ads or in-app purchases.
+- Pop It collects no personal data.
